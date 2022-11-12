@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-const environtment = {
+const environment = {
   port: process.env.PORT,
   mongoDbUrl: process.env.MONGODB_URL,
   jwtSecret: process.env.JWT_SECRET,
@@ -9,4 +9,4 @@ const environtment = {
   supabaseKey: process.env.SUPABASE_KEY,
 };
 
-export default environtment;
+export default environment;

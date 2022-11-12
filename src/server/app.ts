@@ -9,6 +9,7 @@ app.use(morgan("dev"));
 
 app.use(express.json());
 
+app.use("/assets", express.static("assets"));
 app.use("/users", usersRouter);
 
 app.use(notFoundError);

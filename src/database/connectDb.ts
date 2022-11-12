@@ -1,13 +1,12 @@
-import "../loadEnvironment";
 import mongoose from "mongoose";
 import chalk from "chalk";
 import debugCreator from "debug";
 
 const debug = debugCreator("users:database");
 
-const connectDb = async (mongoUrl: string) => {
+const connectDb = async (mongoDbUrl: string) => {
   try {
-    await mongoose.connect(mongoUrl);
+    await mongoose.connect(mongoDbUrl);
     debug(chalk);
   } catch (error: unknown) {
     debug(
