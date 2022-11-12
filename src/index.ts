@@ -10,10 +10,10 @@ const debug = debugCreator("social:root");
 const { port, mongoDbUrl } = environment;
 
 try {
-  await startServer(app, +port);
-  debug(chalk.bgBlueBright.white(`Server is listening on http://:${port}`));
   await connectDb(mongoDbUrl);
   debug(chalk.bgGreen.white(`Database connection Ok!`));
+  await startServer(app, +port);
+  debug(chalk.bgBlueBright.white(`Server is listening on http://:${port}`));
 } catch (error: unknown) {
   debug(
     chalk.bgRed.yellow(`Error starting the API: `, (error as Error).message)

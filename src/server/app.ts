@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import morgan from "morgan";
 import { generalError, notFoundError } from "./middlewares/errors/errors.js";
 import usersRouter from "./routers/usersRouter/usersRouter.js";
@@ -6,11 +7,11 @@ import usersRouter from "./routers/usersRouter/usersRouter.js";
 const app = express();
 
 app.use(morgan("dev"));
-
 app.use(express.json());
 
 app.use("/assets", express.static("assets"));
-app.use("/users", usersRouter);
+
+app.use("/users", cors(), usersRouter);
 
 app.use(notFoundError);
 app.use(generalError);
