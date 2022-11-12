@@ -16,6 +16,19 @@ module.exports = {
         ],
         "@typescript-eslint/indent": "off",
         "@typescript-eslint/no-empty-function": "off",
+        "no-implicit-coercion": "off",
+      },
+    },
+    {
+      files: ["./src/**/models/**/*.ts"],
+      rules: {
+        "@typescript-eslint/naming-convention": "off",
+      },
+    },
+    {
+      files: ["./src/**/routers/**/*.ts"],
+      rules: {
+        "new-cap": "off",
       },
     },
   ],
