@@ -1,3 +1,5 @@
+import "./loadEnvironment.js";
+
 import environment from "./loadEnvironment.js";
 import debugCreator from "debug";
 import chalk from "chalk";
@@ -5,7 +7,7 @@ import app from "./server/app.js";
 import startServer from "./server/startServer.js";
 import connectDb from "./database/connectDb.js";
 
-const debug = debugCreator("social:root");
+const debug = debugCreator("api:social:root");
 
 const { port, mongoDbUrl } = environment;
 
