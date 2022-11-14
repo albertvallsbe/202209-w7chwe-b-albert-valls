@@ -27,7 +27,7 @@ export const generalError = (
   next: NextFunction
 ) => {
   const statusCode = error.statusCode ?? 500;
-  const publicMessage = error.publicMessage || "Core meltdown";
+  const publicMessage = error.publicMessage || "General Error";
 
   debug(chalk.bgRed.white(error.message));
 
