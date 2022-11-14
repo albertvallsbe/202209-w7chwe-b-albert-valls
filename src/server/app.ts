@@ -5,16 +5,7 @@ import { generalError, notFoundError } from "./middlewares/errors/errors.js";
 import usersRouter from "./routers/usersRouter/usersRouter.js";
 
 const app = express();
-app.use(
-  cors({
-    origin: [
-      "https://202209-w7chwe-albert-valls.netlify.app/",
-      "http://localhost:3000",
-      "http://localhost:4000",
-      "http://localhost:2500",
-    ],
-  })
-);
+app.use(cors());
 
 app.disable("x-powered-by");
 
