@@ -65,7 +65,10 @@ export const registerUser = async (
       email,
     });
 
-    res.status(201).json({ user: { id: newUser._id, username, email } });
+    res
+      .status(201)
+      .status(201)
+      .json({ user: { id: newUser._id, username, email } });
   } catch (error: unknown) {
     const customError = new CustomError(
       (error as Error).message,
