@@ -17,12 +17,6 @@ const userSchema = new Schema({
     required: true,
     unique: true,
   },
-  picture: {
-    type: String,
-  },
-  supabasePicture: {
-    type: String,
-  },
 });
 
 export type UserStructure = InferSchemaType<typeof userSchema>;
