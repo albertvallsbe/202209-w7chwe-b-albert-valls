@@ -4,7 +4,6 @@ import type { JwtPayload } from "jsonwebtoken";
 export interface Credentials {
   username: string;
   password: string;
-  _id: string;
 }
 
 export interface RegisterData extends Credentials {
